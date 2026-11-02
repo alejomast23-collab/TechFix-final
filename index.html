@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechFix: mantenimiento, reparación y soporte técnico de computadores en Bogotá.">
+    <meta name="theme-color" content="#0b1f33">
+    <title>TechFix | Servicio técnico de computadores</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado">
+        <div class="contenedor encabezado-interior">
+            <a class="marca" href="#inicio" aria-label="TechFix, ir al inicio">
+                <span class="marca-icono">TF</span>
+                <span>Tech<span>Fix</span></span>
+            </a>
+
+            <button id="btnMenu" class="btn-menu" type="button"
+                    aria-expanded="false" aria-controls="menu">
+                <span aria-hidden="true">☰</span> Menú
+            </button>
+
+            <nav id="menu" class="menu-principal" aria-label="Navegación principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#registro">Clientes</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#carrito">Carrito <span id="contadorCarrito" class="contador">0</span></a>
+            </nav>
+
+            <button id="btnTema" class="btn-tema" type="button" aria-pressed="false">
+                🌙 Modo oscuro
+            </button>
+        </div>
+    </header>
+
+    <main id="contenido" class="contenedor">
+        <section id="inicio" class="hero seccion">
+            <div class="hero-texto">
+                <span class="etiqueta">Soporte técnico confiable</span>
+                <h1>La tecnología funciona mejor cuando está en buenas manos.</h1>
+                <p>En TechFix cuidamos tus equipos con mantenimiento, reparación y soluciones de software para que sigas conectado.</p>
+                <div class="hero-acciones">
+                    <a class="btn btn-principal" href="#servicios">Ver servicios</a>
+                    <a class="btn btn-secundario" href="#contacto">Solicitar asesoría</a>
+                </div>
+                <div class="hero-datos">
+                    <div><strong>3</strong><span>Servicios principales</span></div>
+                    <div><strong>100%</strong><span>Atención dedicada</span></div>
+                    <div><strong>Bogotá</strong><span>Colombia</span></div>
+                </div>
+            </div>
+            <div class="hero-imagen">
+                <img src="img/inicio.svg" alt="Ilustración de un computador con herramientas de soporte técnico">
+                <div class="insignia-flotante"><span>✓</span> Soluciones para tus equipos</div>
+            </div>
+        </section>
+
+        <section id="servicios" class="seccion">
+            <div class="encabezado-seccion">
+                <div>
+                    <span class="etiqueta">Qué hacemos</span>
+                    <h2>Nuestros servicios</h2>
+                    <p>Selecciona el servicio que necesitas y agrégalo a tu carrito.</p>
+                </div>
+                <label class="busqueda-servicios">
+                    <span class="solo-lectores">Buscar servicio</span>
+                    <input id="buscarServicio" type="search" placeholder="Buscar un servicio...">
+                </label>
+            </div>
+
+            <div class="filtros" role="group" aria-label="Filtrar servicios">
+                <button class="filtro activo" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button class="filtro" type="button" data-filtro="mantenimiento" aria-pressed="false">Mantenimiento</button>
+                <button class="filtro" type="button" data-filtro="reparacion" aria-pressed="false">Reparación</button>
+                <button class="filtro" type="button" data-filtro="software" aria-pressed="false">Software</button>
+            </div>
+
+            <div id="contenedorServicios" class="rejilla-servicios">
+                <article class="tarjeta-servicio" data-categoria="mantenimiento">
+                    <img src="img/mantenimiento.svg" alt="Herramientas para mantenimiento de computador">
+                    <div class="tarjeta-contenido">
+                        <span class="categoria">Mantenimiento</span>
+                        <h3>Mantenimiento preventivo</h3>
+                        <p>Limpieza y revisión general para ayudar a mejorar el funcionamiento de tu computador.</p>
+                        <div class="tarjeta-pie">
+                            <strong class="precio">$80.000</strong>
+                            <button class="btn btn-agregar" type="button" data-id="1" data-nombre="Mantenimiento preventivo" data-precio="80000">Agregar <span aria-hidden="true">＋</span></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-servicio" data-categoria="reparacion">
+                    <img src="img/reparacion.svg" alt="Técnico revisando un computador">
+                    <div class="tarjeta-contenido">
+                        <span class="categoria">Reparación</span>
+                        <h3>Reparación de computadores</h3>
+                        <p>Diagnóstico y solución de inconvenientes de hardware y software.</p>
+                        <div class="tarjeta-pie">
+                            <strong class="precio">$120.000</strong>
+                            <button class="btn btn-agregar" type="button" data-id="2" data-nombre="Reparación de computadores" data-precio="120000">Agregar <span aria-hidden="true">＋</span></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-servicio" data-categoria="software">
+                    <img src="img/software.svg" alt="Ventana de instalación de programas">
+                    <div class="tarjeta-contenido">
+                        <span class="categoria">Software</span>
+                        <h3>Instalación de software</h3>
+                        <p>Instalación y configuración de programas y sistemas operativos.</p>
+                        <div class="tarjeta-pie">
+                            <strong class="precio">$60.000</strong>
+                            <button class="btn btn-agregar" type="button" data-id="3" data-nombre="Instalación de software" data-precio="60000">Agregar <span aria-hidden="true">＋</span></button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <p id="sinResultados" class="mensaje-vacio" hidden>No encontramos servicios que coincidan con tu búsqueda.</p>
+        </section>
+
+        <section id="carrito" class="seccion seccion-carrito">
+            <div class="encabezado-seccion">
+                <div>
+                    <span class="etiqueta">Tu selección</span>
+                    <h2>Carrito de servicios</h2>
+                    <p>Revisa los servicios que has seleccionado.</p>
+                </div>
+                <button id="btnVaciar" class="btn btn-peligro-suave" type="button">Vaciar carrito</button>
+            </div>
+            <div id="listaCarrito" class="lista-carrito" aria-live="polite">
+                <p class="mensaje-vacio">Tu carrito está vacío. Agrega un servicio para comenzar.</p>
+            </div>
+            <div class="resumen-carrito">
+                <span>Total estimado</span>
+                <strong>$<span id="total">0</span></strong>
+            </div>
+            <p class="nota">Los valores son ilustrativos y están sujetos a diagnóstico y confirmación.</p>
+        </section>
+
+        <section id="nosotros" class="seccion nosotros">
+            <div>
+                <span class="etiqueta">Conócenos</span>
+                <h2>Tecnología en la que puedes confiar</h2>
+                <p>TechFix es una propuesta de servicio técnico orientada al mantenimiento y reparación de computadores. Buscamos ofrecer atención clara, soluciones prácticas y acompañamiento a nuestros clientes.</p>
+                <a class="enlace" href="#contacto">Hablemos de tu equipo →</a>
+            </div>
+            <div class="nosotros-destacado">
+                <span class="nosotros-icono">⚙</span>
+                <h3>Atención integral</h3>
+                <p>Revisión, mantenimiento y soporte para las necesidades tecnológicas del día a día.</p>
+            </div>
+        </section>
+
+        <section id="registro" class="seccion">
+            <div class="encabezado-seccion">
+                <div>
+                    <span class="etiqueta">Comunidad TechFix</span>
+                    <h2>Registro de clientes</h2>
+                    <p>Crea un registro de demostración para esta aplicación.</p>
+                </div>
+            </div>
+            <div class="dos-columnas">
+                <form id="formRegistro" class="formulario">
+                    <div class="campo">
+                        <label for="nombreRegistro">Nombre completo</label>
+                        <input type="text" id="nombreRegistro" name="nombreRegistro" placeholder="Escribe tu nombre" autocomplete="name" maxlength="80" required>
+                    </div>
+                    <div class="campo">
+                        <label for="documentoRegistro">Número de documento</label>
+                        <input type="text" id="documentoRegistro" name="documentoRegistro" placeholder="Solo números" inputmode="numeric" maxlength="20" required>
+                    </div>
+                    <div class="campo">
+                        <label for="correoRegistro">Correo electrónico</label>
+                        <input type="email" id="correoRegistro" name="correoRegistro" placeholder="ejemplo@correo.com" autocomplete="email" maxlength="120" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefonoRegistro">Teléfono</label>
+                        <input type="tel" id="telefonoRegistro" name="telefonoRegistro" placeholder="7 a 15 dígitos" inputmode="numeric" maxlength="15" required>
+                    </div>
+                    <div class="campo campo-completo">
+                        <label for="usuarioRegistro">Nombre de usuario</label>
+                        <input type="text" id="usuarioRegistro" name="usuarioRegistro" placeholder="Crea un nombre de usuario" minlength="3" maxlength="30" required>
+                    </div>
+                    <button class="btn btn-principal campo-completo" type="submit">Registrar cliente</button>
+                    <p id="mensajeRegistro" class="mensaje-formulario campo-completo" role="status" aria-live="polite"></p>
+                </form>
+
+                <div class="panel-clientes">
+                    <div class="panel-titulo">
+                        <h3>Clientes registrados</h3>
+                        <span id="cantidadClientes" class="contador">0</span>
+                    </div>
+                    <div id="listaClientes" class="lista-clientes" aria-live="polite">
+                        <p class="mensaje-vacio">Aún no hay clientes registrados.</p>
+                    </div>
+                    <p class="nota">Los datos se guardan únicamente en el almacenamiento local de este navegador. No ingreses información personal real en la demostración.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion contacto">
+            <div class="contacto-intro">
+                <span class="etiqueta">Estamos para ayudarte</span>
+                <h2>Solicita tu servicio</h2>
+                <p>Cuéntanos qué sucede con tu equipo. Validaremos los datos y mostraremos una confirmación en esta demostración.</p>
+                <div class="dato-contacto"><span>⌖</span><div><strong>Ubicación</strong><br>Bogotá, Colombia</div></div>
+                <div class="dato-contacto"><span>✓</span><div><strong>Atención</strong><br>Soporte y mantenimiento de computadores</div></div>
+            </div>
+            <form id="formulario" class="formulario formulario-contacto">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" autocomplete="name" maxlength="80" required>
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" autocomplete="email" maxlength="120" required>
+                </div>
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="7 a 15 dígitos" inputmode="numeric" maxlength="15" required>
+                </div>
+                <div class="campo">
+                    <label for="servicio">Servicio</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="Mantenimiento preventivo">Mantenimiento preventivo</option>
+                        <option value="Reparación de computadores">Reparación de computadores</option>
+                        <option value="Instalación de software">Instalación de software</option>
+                    </select>
+                </div>
+                <div class="campo campo-completo">
+                    <label for="mensaje">Describe el problema</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué problema presenta tu equipo..." maxlength="600" required></textarea>
+                </div>
+                <button class="btn btn-principal campo-completo" type="submit">Validar solicitud</button>
+                <p id="resultado" class="mensaje-formulario campo-completo" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor pie-interior">
+            <a class="marca marca-pie" href="#inicio"><span class="marca-icono">TF</span><span>Tech<span>Fix</span></span></a>
+            <p>© <span id="anio"></span> TechFix · Proyecto académico de desarrollo web.</p>
+            <a href="#inicio" class="volver-arriba">Volver arriba ↑</a>
+        </div>
+    </footer>
+</body>
+</html>
